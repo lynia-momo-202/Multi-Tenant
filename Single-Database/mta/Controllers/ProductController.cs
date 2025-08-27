@@ -16,7 +16,7 @@ namespace mta.Controllers
         }
 
         // Get list of products
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult Get()
         {
             var list = _productService.GetAllProducts();
@@ -24,7 +24,7 @@ namespace mta.Controllers
         }
 
         // Create a new product
-        [HttpPost]
+        [HttpPost("create")]
         public IActionResult Post(CreateProductRequest request)
         {
             var result = _productService.CreateProduct(request);
@@ -32,7 +32,7 @@ namespace mta.Controllers
         }
 
         // Delete a product by id
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete(int id)
         {
             var result = _productService.DeleteProduct(id);

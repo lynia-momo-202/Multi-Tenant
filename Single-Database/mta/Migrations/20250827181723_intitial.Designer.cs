@@ -11,7 +11,7 @@ using mta.Models;
 namespace mta.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250827152733_intitial")]
+    [Migration("20250827181723_intitial")]
     partial class intitial
     {
         /// <inheritdoc />
@@ -53,10 +53,6 @@ namespace mta.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ConnectionString")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
