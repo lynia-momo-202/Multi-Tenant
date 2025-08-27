@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/Single-Database/">
+    <Project Path="Single-Database/mta/mta.csproj" />
+  </Folder>
+</Solution>
