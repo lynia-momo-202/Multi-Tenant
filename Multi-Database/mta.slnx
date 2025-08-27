@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/Multi-Database/">
+    <Project Path="mta/mta.csproj" />
+  </Folder>
+</Solution>
