@@ -10,14 +10,18 @@ namespace mta.Models;
      public string CurrentTenantConnectionString { get; set; }
 
 
-     // Constructor 
-     public ApplicationDbContext(ICurrentTenantService currentTenantService, DbContextOptions<ApplicationDbContext> options) : base(options)
-     {
-         _currentTenantService = currentTenantService;
-         CurrentTenantId = _currentTenantService.TenantId;
-         CurrentTenantConnectionString = _currentTenantService.ConnectionString;
+    // Constructor 
+     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
+    internal ApplicationDbContext(ICurrentTenantService currentTenantService, DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+        _currentTenantService = currentTenantService;
+        CurrentTenantId = _currentTenantService.TenantId;
+        CurrentTenantConnectionString = _currentTenantService.ConnectionString;
 
-     }
+    }
 
      // Application DbSets -- create for entity types to be applied to all databases
      public DbSet<Product> Products { get; set; }

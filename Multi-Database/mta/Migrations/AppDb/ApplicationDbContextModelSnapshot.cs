@@ -37,6 +37,10 @@ namespace mta.Migrations.AppDb
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Supplier")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TenantId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
