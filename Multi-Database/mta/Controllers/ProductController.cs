@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using mta.DTOs;
-using mta.Services;
+using mta.Models;
+using mta.Services.ProductService;
 
 namespace mta.Controllers
 {
@@ -16,7 +17,7 @@ namespace mta.Controllers
         }
 
         // Get list of products
-        [HttpGet]
+        [HttpGet("get")]
         public IActionResult Get()
         {
             var list = _productService.GetAllProducts();
@@ -24,15 +25,15 @@ namespace mta.Controllers
         }
 
         // Create a new product
-        [HttpPost]
-        public IActionResult Post(CreateProductRequest request)
+        [HttpPost("create")]
+        public ActionResult<Product> Post(CreateProductRequest request)
         {
             var result = _productService.CreateProduct(request);
-            return Ok(result);
+            return result;
         }
 
         // Delete a product by id
-        [HttpDelete("{id}")]
+        [HttpDelete("delete/{id}")]
         public IActionResult Delete(int id)
         {
             var result = _productService.DeleteProduct(id);

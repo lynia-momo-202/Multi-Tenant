@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "BxW+yo4G7PlfWMU9CmRxlpujcFu8/e0xYpTtIaZG3ow=",
+  "Source": "mta",
+  "BasePath": "_content/mta",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
